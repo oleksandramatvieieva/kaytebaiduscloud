@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (slideshowContainer) {
         const slideUrls = [
-            "image/sliders/IMG_1899.jpg",
-            "image/sliders/IMG_1900.jpg",
-            "image/sliders/IMG_1873.jpg",
-            "image/sliders/5.png"
+            "/image/sliders/IMG_1899.jpg",
+            "/image/sliders/IMG_1900.jpg",
+            "/image/sliders/IMG_1873.jpg",
+            "/image/sliders/5.png"
         ];
 
         let currentSlide = 0;
