@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const slideshowContainer = document.getElementById('image-slideshow');
     
-    // Перевіряємо, чи існує контейнер слайдера на цій сторінці
     if (slideshowContainer) {
         const slideUrls = [
-            "img/slider/IMG_1899.jpg",
-            "img/slider/IMG_1900.jpg",
-            "img/slider/IMG_1873.jpg",
-            "img/slider/5.png"
+            "image/sliders/IMG_1899.jpg",
+            "image/sliders/IMG_1900.jpg",
+            "image/sliders/IMG_1873.jpg",
+            "image/sliders/5.png"
         ];
 
         let currentSlide = 0;
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 slide.style.backgroundImage = `url('${url}')`;
                 slideshowContainer.appendChild(slide);
             });
-            // Додаємо клас active тільки якщо слайди створилися
             if (slideshowContainer.children.length > 0) {
                 slideshowContainer.children[0].classList.add('active');
             }
@@ -38,11 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(nextSlide, 4000);
     }
     
-    // Встановлення фонових зображень через data-attribute
     document.querySelectorAll('[data-bg-url]').forEach(section => {
         const url = section.getAttribute('data-bg-url');
         section.style.backgroundImage = `url('${url}')`;
     });
+
+    // --- ДОДАЄМО СВАЙПИ ДЛЯ МОДАЛКИ ПРИ ЗАВАНТАЖЕННІ ---
+    const modalImage = document.getElementById('modal-main-image');
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (modalImage) {
+        modalImage.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        modalImage.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
+
+    function handleSwipe() {
+        const threshold = 50; // Чутливість свайпу
+        if (touchStartX - touchEndX > threshold) {
+            changeSlide(1); // Свайп вліво -> вперед
+        } else if (touchEndX - touchStartX > threshold) {
+            changeSlide(-1); // Свайп вправо -> назад
+        }
+    }
 });
 
 let currentImageIndex = 0;
@@ -50,23 +72,18 @@ let currentImages = [];
 
 function openProduct(element) {
     const modal = document.getElementById('product-modal');
-    
-    // Отримуємо ТІЛЬКИ картинки
     const imagesString = element.getAttribute('data-images');
     
     if (imagesString) {
         currentImages = imagesString.split(',').map(item => item.trim());
     } else {
-        // Якщо раптом забули додати слайдер, беремо основне фото
         const mainImg = element.querySelector('img').src;
         currentImages = [mainImg];
     }
     
-    // Скидаємо на перше фото
     currentImageIndex = 0;
     updateModalImage();
     
-    // Показуємо стрілочки тільки якщо фоток більше ніж 1
     const buttons = document.querySelectorAll('.slider-btn');
     if (currentImages.length > 1) {
         buttons.forEach(btn => btn.style.display = 'block');
@@ -74,7 +91,6 @@ function openProduct(element) {
         buttons.forEach(btn => btn.style.display = 'none');
     }
 
-    // Показуємо вікно (flex, щоб працювало центрування)
     modal.style.display = 'flex'; 
 }
 
@@ -83,6 +99,7 @@ function closeModal() {
 }
 
 function changeSlide(direction) {
+    if (currentImages.length <= 1) return; // Якщо одне фото, не гортаємо
     currentImageIndex += direction;
     if (currentImageIndex >= currentImages.length) {
         currentImageIndex = 0;
