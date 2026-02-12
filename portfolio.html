@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAYTE BAIDUS - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&family=Roboto:wght@100;400;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="portfolio-clone">
+
+    <header id="desktop-header" class="main-header sticky-header">
+        <div class="header-inner container">
+            <div class="header-logo-brand">
+                <a href="index.html">
+                    <img src="img/icons/logo.svg" alt="Brand Logo" class="header-logo-img">
+                </a>
+            </div>
+             <nav class="main-nav">
+                <ul class="menu">
+                    <li class="menu-item"><a href="index.html">Головна</a></li>
+                    <li class="menu-item current-menu-item"><a href="portfolio.html">Портфоліо</a></li>
+                    <li class="menu-item"><a href="order.html">Замовлення</a></li>
+                </ul>
+            </nav>
+           <div class="header-social-icons">
+            <a href="https://www.instagram.com/kaytebaidus/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kaytebaidus" target="_blank" aria-label="TikTok"> 
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://t.me/kaytebaidus" target="_blank" aria-label="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+        </div>
+        </div>
+    </header>
+
+    <div id="mobile-header" class="mobile-header-wrapper">
+        <a href="index.html" class="mobile-logo-link">
+            <img src="img/icons/logo.svg" alt="Kayte Baidus Logo">
+        </a>
+        <input type="checkbox" id="nav-toggle-mobile" class="burger-nav_control" hidden>
+        <label for="nav-toggle-mobile" class="burger-button">
+            <span class="menu-text">Menu</span>
+        </label>
+        <nav class="burger-navigation">
+            <div class="mobile-menu-content">
+                <img src="img/icons/logo.svg" alt="Kayte Baidus Logo" style="filter: invert(1);">
+                <ul class="mobile-menu-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="order.html">Замовлення</a></li>
+                </ul>
+                <div class="mobile-social-links">
+                <a href="https://www.tiktok.com/@kaytebaidus" target="_blank" aria-label="TikTok"> 
+                    <i class="fab fa-tiktok"></i>
+                </a>                
+                <a href="https://www.instagram.com/kaytebaidus/"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/kaytebaidus"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <h1 class="main-text-logo">Kayte Baidus</h1>
+            </div>
+        </section>
+
+        <section class="headline-section dark-bg">
+            <div class="container text-center">
+                <h2 class="section-title"><span class="italic-text">ПОРТФОЛІО</h2>
+                <p class="section-subtitle">Уся моя творчість в одному місці.</p>
+            </div>
+        </section>
+
+       <section class="portfolio-grid container">
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-7/IMG_8880.jpg, photos/clutch/bag-7/IMG_8886.jpg, photos/clutch/bag-7/IMG_8878.jpg, photos/clutch/bag-7/IMG_8876.jpg, photos/clutch/bag-7/IMG_8879.jpg">
+            
+            <img src="photos/clutch/bag-7/IMG_8880.jpg" alt="Bag 1">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-7/IMG_8381.jpg, photos/cross-body/bag-7/IMG_8077.jpg, photos/cross-body/bag-7/IMG_8078.jpg">
+            
+            <img src="photos/cross-body/bag-7/IMG_8381.jpg" alt="Bag 2">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-1/IMG_5628.jpg, photos/cross-body/bag-1/IMG_5535.jpg, photos/cross-body/bag-1/IMG_5672.jpg, photos/cross-body/bag-1/IMG_5658.jpg, photos/cross-body/bag-1/IMG_5658.jpg">
+            
+            <img src="photos/cross-body/bag-1/IMG_5628.jpg" alt="Bag 3">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-1/IMG_7041.jpg, photos/clutch/bag-1/IMG_7066.jpg, photos/clutch/bag-1/IMG_7075.jpg, photos/clutch/bag-1/IMG_7062.jpg">
+            
+            <img src="photos/clutch/bag-1/IMG_7041.jpg" alt="Bag 4">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/tote/bag-1/IMG_2431.jpg, photos/tote/bag-1/IMG_2430.jpg, photos/tote/bag-1/IMG_2429.jpg, photos/tote/bag-1/IMG_2427.jpg">
+            
+            <img src="photos/tote/bag-1/IMG_2431.jpg" alt="Bag 5">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+         <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-5/IMG_3671.jpg, photos/cross-body/bag-5/IMG_3784.jpg, photos/cross-body/bag-5/IMG_3772.jpg, photos/cross-body/bag-5/IMG_3786.jpg, photos/cross-body/bag-5/IMG_3750.jpg">
+            
+            <img src="photos/cross-body/bag-5/IMG_3671.jpg" alt="Bag 6">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-6/IMG_7345.jpg, photos/clutch/bag-6/IMG_7356.jpg, photos/clutch/bag-6/IMG_7340.jpg, photos/clutch/bag-6/IMG_7347.jpg, photos/clutch/bag-6/IMG_7315.jpg">
+            
+            <img src="photos/clutch/bag-6/IMG_7345.jpg" alt="Bag 7">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-4/IMG_8855.jpg, photos/cross-body/bag-4/IMG_8859.jpg, photos/cross-body/bag-4/IMG_8876.jpg">
+            
+            <img src="photos/cross-body/bag-4/IMG_8855.jpg" alt="Bag 8">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/tote/bag-3/IMG_3425.jpg, photos/tote/bag-3/IMG_3444.jpg">
+            
+            <img src="photos/tote/bag-3/IMG_3425.jpg" alt="Bag 9">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/tote/bag-2/IMG_3917.jpg, photos/tote/bag-2/IMG_3931.jpg, photos/tote/bag-2/IMG_3927.jpg">
+            
+            <img src="photos/tote/bag-2/IMG_3917.jpg" alt="Bag 10">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-2/IMG_0352.jpg, photos/clutch/bag-2/IMG_9687.jpg, photos/clutch/bag-2/IMG_0353.jpg, photos/clutch/bag-2/IMG_9837.jpg">
+            
+            <img src="photos/clutch/bag-2/IMG_0352.jpg" alt="Bag 11">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+         <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-2/IMG_3970.jpg, photos/cross-body/bag-2/IMG_3958.jpg, photos/cross-body/bag-2/IMG_4067.jpg, photos/cross-body/bag-2/IMG_3979.jpg, photos/cross-body/bag-2/IMG_4055.jpg">
+            
+            <img src="photos/cross-body/bag-2/IMG_3970.jpg" alt="Bag 12">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-3/IMG_1762.jpg, photos/clutch/bag-3/IMG_1843.jpg, photos/clutch/bag-3/IMG_1766.jpg, photos/clutch/bag-3/IMG_1841.jpg, photos/clutch/bag-3/IMG_1773.jpg">
+            
+            <img src="photos/clutch/bag-3/IMG_1762.jpg" alt="Bag 13">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-3/IMG_8392.jpg, photos/cross-body/bag-3/IMG_8408.jpg, photos/cross-body/bag-3/IMG_8396.jpg">
+            
+            <img src="photos/cross-body/bag-3/IMG_8392.jpg" alt="Bag 14">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-8/IMG_8910.jpg, photos/clutch/bag-8/IMG_8914.jpg">
+            
+            <img src="photos/clutch/bag-8/IMG_8910.jpg" alt="Bag 15">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+         <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/tote/bag-4/IMG_3160.jpg, photos/tote/bag-4/IMG_3163.jpg">
+            
+            <img src="photos/tote/bag-4/IMG_3160.jpg" alt="Bag 16">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-5/IMG_6797.jpg, photos/clutch/bag-5/IMG_6795.jpg, photos/clutch/bag-5/IMG_6814.jpg, photos/clutch/bag-5/IMG_6822.jpg, photos/clutch/bag-5/IMG_6834.jpg">
+            
+            <img src="photos/clutch/bag-5/IMG_6797.jpg" alt="Bag 17">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+         <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-8/IMG_8973.jpg, photos/cross-body/bag-8/IMG_8974.jpg, photos/cross-body/bag-8/IMG_8975.jpg">
+            
+            <img src="photos/cross-body/bag-8/IMG_8973.jpg" alt="Bag 18">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/clutch/bag-4/IMG_1904.jpg, photos/clutch/bag-4/IMG_1907.jpg, photos/clutch/bag-4/IMG_1433.jpg, photos/clutch/bag-4/IMG_1444.jpg">
+            
+            <img src="photos/clutch/bag-4/IMG_1904.jpg" alt="Bag 19">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+         <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/tote/bag-5/IMG_3179.jpg, photos/tote/bag-5/IMG_3181.jpg, photos/tote/bag-5/IMG_4262.jpg">
+            
+            <img src="photos/tote/bag-5/IMG_3179.jpg" alt="Bag 20">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-6/IMG_5293.jpg, photos/cross-body/bag-6/IMG_5362.jpg, photos/cross-body/bag-6/IMG_5376.jpg">
+            
+            <img src="photos/cross-body/bag-6/IMG_5293.jpg" alt="Bag 21">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/cross-body/bag-9/IMG_6637.jpg, photos/cross-body/bag-9/IMG_6644.jpg">
+            
+            <img src="photos/cross-body/bag-9/IMG_6637.jpg" alt="Bag 22">
+            <div class="item-overlay">
+            </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openProduct(this)" 
+             data-images="photos/kitchen/IMG_2965.jpg, photos/kitchen/IMG_2986.jpg, photos/kitchen/IMG_2995.jpg">
+            
+            <img src="photos/kitchen/IMG_2965.jpg" alt="Kitchen">
+            <div class="item-overlay">
+            </div>
+        </div>
+    </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content only-gallery">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-body">
+                <div class="modal-gallery full-width">
+                    <img id="modal-main-image" src="" alt="Product Image">
+                    
+                    <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section class="contact-cta-section sticky-cta" data-bg-url="img/slider/5.png">
+            <div class="container text-center">
+                <h2 class="cta-title"><br>Створіть свій ідеал.</h2>
+                <p class="cta-description">Ваш персональний дизайн починається тут. Кожен виріб KAYTE BAIDUS — це не просто аксесуар, це діалог про вашу форму, бажані матеріали та функціональність, створений мною вручну та спеціально для вас. Натисніть кнопку, щоб перейти до сторінки замовлення, де я покроково описую, як ми можемо втілити ваш ексклюзивний проєкт у життя.</p>
+                <a href="order.html" class="primary-button dark-button">
+                    <span class="button-icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    <span class="button-text">Як Замовити?</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links-section container">
+            <nav class="footer-nav">
+                <div class="nav-col">
+                    <a href="index.html">Головна</a>
+                    <a href="portfolio.html">Портфоліо</a>
+                    <a href="order.html">Замовлення</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="copyright-bar container">
+            <p>© 2025 KAYTE BAIDUS. All Rights Reserved.</p>
+            <p>Website by Matvieieva Oleksandra</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
