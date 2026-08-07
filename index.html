@@ -30,9 +30,52 @@
 
     <!-- Favicon & Styles -->
     <link rel="icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="author" content="Kayte Baidus">
+
+    <!-- Performance: connect early to third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preload" as="image" href="image/sliders/IMG_1899.jpg">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&family=Roboto:wght@100;400;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data: local business / artisan -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://kaytebaidus.com/#business",
+      "name": "KAYTE BAIDUS",
+      "image": "https://kaytebaidus.com/image/IMG_1908.jpg",
+      "url": "https://kaytebaidus.com/",
+      "description": "Ексклюзивні в'язані сумки ручної роботи на замовлення: клатчі, шопери, крос-боді. Handmade knitted & crochet bags made to order in Ukraine.",
+      "priceRange": "₴₴",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UA"
+      },
+      "areaServed": "UA",
+      "sameAs": [
+        "https://www.instagram.com/kaytebaidus/",
+        "https://www.tiktok.com/@kaytebaidus",
+        "https://t.me/kaytebaidus"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "KAYTE BAIDUS",
+      "url": "https://kaytebaidus.com/",
+      "inLanguage": "uk-UA"
+    }
+    </script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -118,7 +161,7 @@
         <section class="welcome-section container">
             <div class="content-wrapper">
                 <div class="col-image">
-                    <img src="image/IMG_1908.jpg" alt="Портрет Каті Байдусь">
+                    <img src="image/IMG_1908.jpg" alt="Катя Байдусь — майстриня в'язаних сумок ручної роботи KAYTE BAIDUS" loading="lazy" decoding="async">
                 </div>
                 <div class="col-text">
                     <div class="text-box">
@@ -144,17 +187,17 @@
 
         <section class="portfolio-grid container">
             <div class="grid-item">
-                <img src="image/IMG_9687.jpg" alt="Portfolio 1">
+                <img src="image/IMG_9687.jpg" alt="В'язана сумка ручної роботи KAYTE BAIDUS — приклад з портфоліо" loading="lazy" decoding="async">
             </div>
             <div class="grid-item central-image">
-                <img src="image/IMG_8972.jpg" alt="Portfolio 2">
+                <img src="image/IMG_8972.jpg" alt="Клатч ручної роботи в'язаний — приклад з портфоліо KAYTE BAIDUS" loading="lazy" decoding="async">
                 <a href="portfolio.html" class="primary-button light-button desktop-only">
                     <span class="button-icon"><i class="fas fa-arrow-up-right-from-square"></i></span>
                     <span class="button-text">Портфоліо</span>
                 </a>
             </div>
             <div class="grid-item">
-                <img src="image/IMG_3679.jpg" alt="Portfolio 3">
+                <img src="image/IMG_3679.jpg" alt="Сумка крос-боді в'язана ручної роботи — приклад з портфоліо KAYTE BAIDUS" loading="lazy" decoding="async">
             </div>
             <div class="mobile-only full-width-button-container">
                 <a href="portfolio.html" class="primary-button light-button">
